@@ -10,12 +10,13 @@ layout techniques.
 ## Features
 - Product catalog with 13 products in 4 categories (Electronics, Fashion, Home, Sports)
 - Category filter chips, and tapping a product opens a detail screen
+- Working cart (add, change quantity, total, checkout) and wishlist, with count badges on the navigation
 - Breakpoints: mobile `< 600`, tablet `600–1024`, desktop `> 1024` (`lib/utils/responsive.dart`)
 - `GridView` with 2 / 3 / 4 columns on mobile / tablet / desktop
 - Adaptive navigation: `BottomNavigationBar` on mobile, `NavigationRail` on tablet and desktop (extended on desktop)
 - Detail screen uses a `Column` on mobile and a `Row` on tablet/desktop
 - Uses `MediaQuery`, `LayoutBuilder`, `Flexible`/`Expanded` and `AspectRatio`
-- Reusable widgets: `ProductCard`, `ProductGrid`, `CategoryChips`, `PriceTag`, `RatingStars`
+- Reusable widgets: `ProductCard`, `ProductGrid`, `CategoryChips`, `PriceTag`, `RatingStars`, `EmptyState`
 - No external packages or network images (emojis and Material icons only)
 
 ## Project structure
@@ -23,16 +24,20 @@ layout techniques.
 lib/
 ├── main.dart
 ├── models/product.dart
+├── models/cart.dart
 ├── data/product_data.dart
 ├── utils/responsive.dart
 ├── screens/catalog_screen.dart
 ├── screens/product_detail_screen.dart
+├── screens/cart_view.dart
+├── screens/wishlist_view.dart
 └── widgets/
     ├── product_card.dart
     ├── product_grid.dart
     ├── category_chips.dart
     ├── price_tag.dart
-    └── rating_stars.dart
+    ├── rating_stars.dart
+    └── empty_state.dart
 ```
 
 ## How to run
